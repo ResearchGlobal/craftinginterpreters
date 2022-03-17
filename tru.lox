@@ -1,0 +1,25 @@
+class engine {
+	init(cyl){
+		this.cyl = cyl;
+	}
+	rev(){
+		print "vroom";
+	}
+}
+
+class car < engine {
+	init(make, model, cyl) {
+		super.init(cyl);
+		this.make = make;
+		this.model = model;
+	}
+
+	lock() {
+		print "locked";
+	}
+}
+
+var m5 = car("bmw", "m5", 10);
+print m5.cyl;
+m5.rev();
+m5.lock();
